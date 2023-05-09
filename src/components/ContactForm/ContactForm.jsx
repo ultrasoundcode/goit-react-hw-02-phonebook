@@ -1,7 +1,6 @@
-import { Formik, Field, ErrorMessage } from 'formik';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { nanoid } from 'nanoid';
 import * as Yup from 'yup';
-import { StyledForm, FormGroup } from './ContactForm.styled';
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string().min(2, 'Too Short!').required('Required'),
@@ -19,14 +18,14 @@ function ContactForm({ onAddContact }) {
         actions.resetForm();
       }}
     >
-      <StyledForm>
-        <FormGroup>
+      <Form>
+        <label>
           Name
           <Field name="name" placeholder="Name" type="text" />
           <ErrorMessage name="name" />
-        </FormGroup>
+        </label>
         <button type="submit">Add contact</button>
-      </StyledForm>
+      </Form>
     </Formik>
   );
 }
