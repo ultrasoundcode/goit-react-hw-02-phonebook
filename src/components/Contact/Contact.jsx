@@ -12,3 +12,4 @@ Contact.propTypes = {
 };
 
 export default Contact;
+// Contact
