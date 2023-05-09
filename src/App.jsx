@@ -9,14 +9,9 @@ export class App extends Component {
     name: '',
   };
   addContact = newContact => {
-    this.setState(
-      prevState => ({
-        contacts: [...prevState.contacts, newContact],
-      }),
-      () => {
-        localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
-      }
-    );
+    this.setState(prevState => ({
+      contacts: [...prevState.contacts, newContact],
+    }));
   };
 
   render() {
