@@ -1,4 +1,5 @@
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+import styles from './ContactForm.module.css';
 import { nanoid } from 'nanoid';
 import * as Yup from 'yup';
 
@@ -20,18 +21,20 @@ function ContactForm({ onAddContact }) {
         actions.resetForm();
       }}
     >
-      <Form>
-        <label>
+      <Form className={styles.form}>
+        <label className={styles.label}>
           Name
           <Field name="name" placeholder="Name" type="text" />
           <ErrorMessage name="name" />
         </label>
-        <label>
+        <label className={styles.label}>
           Number
           <Field name="number" placeholder="Number" type="tel" />
           <ErrorMessage name="number" />
         </label>
-        <button type="submit">Add contact</button>
+        <button type="submit" className={styles.btn}>
+          Add contact
+        </button>
       </Form>
     </Formik>
   );

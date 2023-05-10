@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import { GlobalStyle } from 'components/GlobalStyle';
 import ContactForm from 'components/ContactForm/ContactForm';
 import ContactsList from 'components/ContactsList/ContactsList';
 import FilterContact from 'components/FilterContact/FilterContact';
@@ -37,7 +36,6 @@ export class App extends Component {
     const { contacts, filter } = this.state;
     return (
       <div>
-        <GlobalStyle />
         <h1>Phonebook</h1>
         <ContactForm contacts={contacts} onAddContact={this.addContact} />
         <FilterContact value={filter} onChange={this.changeFilter} />
