@@ -1,11 +1,15 @@
+import styles from './Contact.module.css';
 import PropTypes from 'prop-types';
 
-function Contact({ contact: { name, number } }) {
+function Contact({ contact: { id, name, number }, onDeleteContact }) {
   return (
-    <>
-      <p>{name}</p>
-      <p>{number}</p>
-    </>
+    <div className={styles.wrapper}>
+      <p className={styles.name}>{name}</p>
+      <p className={styles.number}>{number}</p>
+      <button className={styles.btn} onClick={() => onDeleteContact({ id })}>
+        Delete
+      </button>
+    </div>
   );
 }
 Contact.propTypes = {

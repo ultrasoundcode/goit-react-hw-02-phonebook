@@ -24,12 +24,22 @@ function ContactForm({ onAddContact }) {
       <Form className={styles.form}>
         <label className={styles.label}>
           Name
-          <Field name="name" placeholder="Name" type="text" />
+          <Field
+            className={styles.field}
+            name="name"
+            placeholder="Name"
+            type="text"
+          />
           <ErrorMessage name="name" />
         </label>
         <label className={styles.label}>
           Number
-          <Field name="number" placeholder="Number" type="tel" />
+          <Field
+            className={styles.field}
+            name="number"
+            placeholder="Number"
+            type="tel"
+          />
           <ErrorMessage name="number" />
         </label>
         <button type="submit" className={styles.btn}>

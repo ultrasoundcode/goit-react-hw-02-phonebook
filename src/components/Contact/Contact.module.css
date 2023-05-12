@@ -1,10 +1,20 @@
-.form {
+.wrapper {
   background-color: rgb(108, 105, 105);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 330px;
+}
+.name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 5px;
+}
+.number {
+  font-family: 'JetBrains Mono', monospace;
+  padding: 10px;
 }
 .btn {
   font-family: 'JetBrains Mono', monospace;
@@ -13,16 +23,4 @@
   height: 30px;
   margin-bottom: 10px;
   border: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.label {
-  display: flex;
-  flex-direction: column;
-  font-family: 'JetBrains Mono', monospace;
-  margin-top: 10px;
-}
-.field {
-  height: 30px;
-  margin-top: 10px;
 }
